@@ -1,0 +1,31 @@
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby '3.2.0'
+
+gem 'rails', '~> 7.0.8'
+gem 'pg', '~> 1.1'
+gem 'puma', '~> 5.0'
+gem 'bcrypt', '~> 3.1.7'
+gem 'jwt', '~> 2.7'
+gem 'active_model_serializers', '~> 0.10.13'
+gem 'rack-cors', '~> 2.0'
+gem 'aws-sdk-s3', '~> 1.136'
+gem 'sidekiq', '~> 7.1'
+gem 'redis', '~> 5.0'
+gem 'sendgrid-ruby', '~> 6.7'
+gem 'pagy', '~> 6.0'
+gem 'ransack', '~> 4.0'
+gem 'faker', '~> 3.2'
+gem 'dotenv-rails', '~> 2.8'
+gem 'pg_search', '~> 2.3'
+
+group :development, :test do
+  gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails', '~> 6.0'
+  gem 'factory_bot_rails', '~> 6.2'  # Fixed: changed ~= to ~>
+end
+
+group :development do
+  gem 'spring'
+end
